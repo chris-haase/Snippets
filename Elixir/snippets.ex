@@ -3,3 +3,6 @@
 
 # config
 Application.get_env(:application_atom, :your_atom)
+
+
+ Node.list :this
