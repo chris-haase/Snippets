@@ -5,5 +5,8 @@
 # config
 Application.get_env(:application_atom, :your_atom)
 
+# Cache
+Cachex.set(:my_cache, "key", "value", ttl: :timer.seconds(5))
+Cachex.get(:my_cache, "key")
 
  Node.list :this
