@@ -14,3 +14,5 @@ Cachex.get(:my_cache, "key")
   # access to pids 
   pid = Process.whereis(name_of_pid) 
   list = Process.registered
+
+Process.exit(pid, :kill)
