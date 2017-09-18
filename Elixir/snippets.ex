@@ -1,3 +1,7 @@
+# MIX
+mix do deps.get, compile
+
+
 # epoch timeseconds
 :os.system_time(:seconds)
 :timer.seconds(15)
