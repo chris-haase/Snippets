@@ -10,3 +10,7 @@ Cachex.set(:my_cache, "key", "value", ttl: :timer.seconds(5))
 Cachex.get(:my_cache, "key")
 
  Node.list :this
+
+  # access to pids 
+  pid = Process.whereis(name_of_pid) 
+  list = Process.registered
