@@ -20,3 +20,8 @@ Cachex.get(:my_cache, "key")
   list = Process.registered
 
 Process.exit(pid, :kill)
+
+# List Timezones (timex)
+
+Timex.timezones |> Enum.each(&(IO.puts "#{&1}"))
+
