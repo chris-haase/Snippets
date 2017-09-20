@@ -5,11 +5,9 @@ defmodule Utilities.Time do
   def zonal_timestamp(zone \\ "US/Eastern") do
     Timex.format!(Timex.now(zone), "%FT%T%:z", :strftime)
   end
-
 end
 
 defmodule Utilities.Log do
-
 
   def console(message, module \\ nil) do
 
@@ -18,10 +16,6 @@ defmodule Utilities.Log do
       _   -> "-- #{to_string(module)} -- "
     end
 
-    IO.puts "[#{Utilities.Time.zonal_timestamp}] #{module} #{message}"
+    IO.puts "[#{Utilities.Time.zonal_timestamp}] #{module} #{inspect(message)}"
   end
-
 end
-
-
-# Timex.timezones |> Enum.each(&(IO.puts "#{&1}"))
