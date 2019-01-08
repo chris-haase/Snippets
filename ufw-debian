@@ -1,0 +1,27 @@
+#!/bin/bash
+
+sudo su
+
+# install
+apt-get install ufw -y
+
+#setup
+ufw default allow outgoing
+ufw default deny incoming
+ufw logging on
+
+# [ssh] quonix-datacenter
+ufw allow from 76.8.49.224/28 to any port ssh
+
+# [ssh] weldin-office
+ufw allow from 96.93.56.88/29 to any port ssh
+
+# [https]
+ufw allow https/tcp
+
+# start
+systemctl enable ufw
+systemctl start ufw
+
+# check
+ufw status
