@@ -16,6 +16,16 @@ ufw allow from 76.8.49.224/28 to any port ssh
 # [ssh] weldin-office
 ufw allow from 96.93.56.88/29 to any port ssh
 
+# [ssh] local-lan
+ufw allow from 192.168.x.1/24 to any port ssh
+ufw allow from    10.x.x.1/24 to any port ssh
+
+# [rdc] weldin-office
+ufw allow from 96.93.56.88/29 to any port 3389
+
+
+
+
 # [https]
 ufw allow https/tcp
 
